@@ -3,62 +3,97 @@
         "Group1": [
             {
                 "Arg": "String1",
-                "Variation1": 10,
+                "Variation1": 0,
                 "Variation2": 0
             },
             {
-                "Arg": "test1",
-                "Variation1": 12,
-                "Variation2": 0
-            },
-            {
-                "Arg": "asdasda",
+                "Arg": "test",
                 "Variation1": 0,
                 "Variation2": 0
             }
         ],
         "Group2": [
             {
-                "Arg": "String3",
+                "Arg": "String1",
                 "Variation1": 0,
                 "Variation2": 0
             },
             {
-                "Arg": "test2",
-                "Variation1": 0,
+                "Arg": "test",
+                "Variation1": 2,
                 "Variation2": 0
             }
         ],
         "Group3": [
             {
-                "Arg": "String4",
+                "Arg": "String1",
+                "Variation1": 0,
+                "Variation2": 0
+            },
+            {
+                "Arg": "test",
                 "Variation1": 0,
                 "Variation2": 0
             }
         ]
     },
+    "global_arguments": [
+        "String1",
+        "test"
+    ],
     "history": {
         "Group1": [
             {
-                "Arg": "test1",
+                "Arg": "String1",
                 "Variation": "Variation1",
                 "OldValue": 0,
-                "NewValue": 1
+                "NewValue": 2
+            },
+            {
+                "Arg": "test2",
+                "Variation": "Variation1",
+                "OldValue": 0,
+                "NewValue": 2
+            },
+            {
+                "Arg": "test2",
+                "Variation": "Variation1",
+                "OldValue": 2,
+                "NewValue": 3
+            },
+            {
+                "Arg": "test2",
+                "Variation": "Variation2",
+                "OldValue": 0,
+                "NewValue": 3
+            },
+            {
+                "Arg": "String1",
+                "Variation": "Variation1",
+                "OldValue": 2,
+                "NewValue": 0
             },
             {
                 "Arg": "String1",
                 "Variation": "Variation1",
                 "OldValue": 0,
-                "NewValue": 10
+                "NewValue": 0
             },
             {
-                "Arg": "test1",
+                "Arg": "String1",
                 "Variation": "Variation1",
-                "OldValue": 1,
-                "NewValue": 12
+                "OldValue": 0,
+                "NewValue": 0
             }
         ],
-        "Group2": [],
+        "Group2": [
+            {
+                "Arg": "test",
+                "Variation": "Variation1",
+                "OldValue": 0,
+                "NewValue": 2
+            }
+        ],
         "Group3": []
     }
 }
