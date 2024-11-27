@@ -1,7 +1,7 @@
 import PySimpleGUI as sg
 import json
 import os
-
+from datetime import datetime
 
 class VariationTracker:
     def __init__(self, filename="data.json"):
@@ -84,7 +84,8 @@ class VariationTracker:
                         'Arg': arg,
                         'Variation': variation,
                         'OldValue': old_value,
-                        'NewValue': value
+                        'NewValue': value,
+                        'Timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S')  # Add timestamp
                     })
                     break
 
@@ -110,7 +111,7 @@ def main():
         [sg.Text('Current Variations:'), sg.Multiline(size=(60, 10), key='-CURRENT-', disabled=True)],
         [sg.Text('History for Selected Group:'), sg.Multiline(size=(60, 10), key='-HISTORY-', disabled=True)]
     ]
-
+    # Enable tabbing and keyboard focus for the ComboBoxes
     window = sg.Window('Variation Tracker', layout, finalize=True)
 
     def refresh_interface(selected_group=None, selected_argument=None):
@@ -132,7 +133,7 @@ def main():
         # Refresh history if a group is selected
         if selected_group:
             history = "\n".join([
-                f"{h['Arg']} - {h['Variation']}: {h['OldValue']} -> {h['NewValue']}"
+                f"{h['Arg']} - {h['Variation']}: {h['OldValue']} -> {h['NewValue']} at {h['Timestamp']}"
                 for h in tracker.get_history(selected_group)
             ])
             window['-HISTORY-'].update(history)
@@ -141,7 +142,8 @@ def main():
 
     # Initial refresh
     refresh_interface()
-
+    
+    
     while True:
         event, values = window.read()
         if event == sg.WINDOW_CLOSED:
