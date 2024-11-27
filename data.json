@@ -1,0 +1,64 @@
+{
+    "principal_list": {
+        "Group1": [
+            {
+                "Arg": "String1",
+                "Variation1": 10,
+                "Variation2": 0
+            },
+            {
+                "Arg": "test1",
+                "Variation1": 12,
+                "Variation2": 0
+            },
+            {
+                "Arg": "asdasda",
+                "Variation1": 0,
+                "Variation2": 0
+            }
+        ],
+        "Group2": [
+            {
+                "Arg": "String3",
+                "Variation1": 0,
+                "Variation2": 0
+            },
+            {
+                "Arg": "test2",
+                "Variation1": 0,
+                "Variation2": 0
+            }
+        ],
+        "Group3": [
+            {
+                "Arg": "String4",
+                "Variation1": 0,
+                "Variation2": 0
+            }
+        ]
+    },
+    "history": {
+        "Group1": [
+            {
+                "Arg": "test1",
+                "Variation": "Variation1",
+                "OldValue": 0,
+                "NewValue": 1
+            },
+            {
+                "Arg": "String1",
+                "Variation": "Variation1",
+                "OldValue": 0,
+                "NewValue": 10
+            },
+            {
+                "Arg": "test1",
+                "Variation": "Variation1",
+                "OldValue": 1,
+                "NewValue": 12
+            }
+        ],
+        "Group2": [],
+        "Group3": []
+    }
+}
